@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -49,6 +50,9 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
+            'is_admin'=>'integer|max:3',
+            'status'=>'integer|max:3',
+            'role_id'=>'integer|max:3',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
@@ -62,10 +66,33 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        // $saveNewUser =  $this->dataRegister($data);
+        $user =  new User;
+        $user->name     = $data['name'];
+        $user->is_admin = User::IS_NOT_ADMIN;
+        $user->status   =  User::IS_ACTIVE;
+        $user->email = $data['email'];
+        $user->password = bcrypt($data['password']);
+        $user->save();
+
+        // po defaultu novi user dobija rolu subscriber
+         $role =  Role::find(3);
+        $user->roles()->attach($role->id);
+        return $user;
+       
+        /* 
+          LARAVEL DEFAULT LOGIN;
+
         return User::create([
             'name' => $data['name'],
+            'is_admin'=>User::IS_NOT_ADMIN,
+            'status'=>User::IS_ACTIVE,
+            'role_id'=> 3,  // id of subscriber 
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        */
     }
+
 }

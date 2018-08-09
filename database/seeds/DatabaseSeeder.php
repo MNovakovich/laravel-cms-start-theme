@@ -2,15 +2,18 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        // $this->call(UsersTableSeeder::class);
-    }
+class DatabaseSeeder extends Seeder {
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
+	public function run() {
+		$this->call(RoleSeeder::class);
+		$this->call(CategorySeeder::class);
+		factory(App\User::class, 30)->create();
+		factory(App\Post::class, 30)->create();
+		$this->call(RoleUserSeeder::class);
+
+	}
 }
