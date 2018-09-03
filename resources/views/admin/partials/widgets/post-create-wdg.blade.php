@@ -4,20 +4,19 @@
  -->
 <div class="panel panel-default">
     <a href="#publish" data-toggle="collapse">
-    <div class="panel-heading">Publish(jos ne radi!)</div>
+    <div class="panel-heading">Status</div>
     <div id="publish" class="collapse in">
         <div class="panel-body">
-            <a href="#visibility" class="btn btn-default" data-toggle="collapse">   <i class="fa fa-eye" aria-hidden="true"></i>  Visibility:</a>
+            <a href="#visibility" class="btn btn-default" data-toggle="collapse">   <i class="fa fa-eye" aria-hidden="true"></i>  Status:</a>
             <div id="visibility" class="collapse in">
+
+               @foreach($statuses as $key => $status)
+             
                 <div class="checkbox">
-                    <label><input type="checkbox" value="">Public</label>
+                    <label><input type="checkbox" name="status" value="{{$status}}">{{$status}}</label>
                 </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Pasword protected</label>
-                </div>
-                <div class="checkbox disabled">
-                <label><input type="checkbox" value="" >Private</label>
-                </div>
+               @endforeach
+               
             </div><!-- #visibility
         </div><!-- panel-body-->
     </div><!-- #publish colapse-->

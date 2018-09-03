@@ -7,17 +7,19 @@
     <div class="panel-heading">Publish(jos ne radi!)</div>
     <div id="publish" class="collapse in">
         <div class="panel-body">
-            <a href="#visibility" class="btn btn-default" data-toggle="collapse">   <i class="fa fa-eye" aria-hidden="true"></i>  Visibility:</a>
+            <a href="#visibility" class="btn btn-default" data-toggle="collapse">   <i class="fa fa-eye" aria-hidden="true"></i>  Statuses:</a>
             <div id="visibility" class="collapse in">
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Public</label>
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox" value="">Pasword protected</label>
-                </div>
-                <div class="checkbox disabled">
-                <label><input type="checkbox" value="" >Private</label>
-                </div>
+                @foreach($statuses as $key => $status)
+                     @if($status == $post->status)
+                       <div class="checkbox">
+                          <label><input type="checkbox" name="status" value="{{$status}}" checked>{{$status}}</label>
+                       </div>
+                    @else
+                      <div class="checkbox">
+                         <label><input type="checkbox" name="status" value="{{$status}}">{{$status}}</label>
+                       </div>
+                    @endif
+                @endforeach
             </div><!-- #visibility
         </div><!-- panel-body-->
     </div><!-- #publish colapse-->
@@ -31,11 +33,19 @@
     <div class="panel-heading">CATEGORIES</div></a>
     <div id="categories-collaps" class="collapse in">
         <div class="panel-body">
-           
+            
                 @foreach($categories as $category)
                 <div class="checkbox">
+                    @if($post->category->id  == $category->id)
+                        <label><input type="checkbox" name="category_id" value="{{$category->id}}" checked>{{$category->name}}</label>
+                    
+                        @else
                     <label><input type="checkbox" name="category_id" value="{{$category->id}}">{{$category->name}}</label>
-                </div>
+                
+                   
+
+                    @endif
+               </div>
                  @endforeach
           
         </div><!-- panel-body-->

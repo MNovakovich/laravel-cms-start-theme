@@ -26,6 +26,7 @@ Route::group(['middleware' => ['web', 'administrator']], function () {
 
 	Route::resource('/admin/users', 'Admin\AdminUserController');
 	Route::resource('/admin/posts', 'Admin\AdminPostsController');
+//	Route::get('/admin/posts/{slug}/edit', 'Admin\AdminPostsController@edit')->name('posts.edit');
 	Route::resource('/admin/categories', 'Admin\AdminCategoriesController');
 	Route::resource('/admin/media', 'Admin\AdminMediasController');
 

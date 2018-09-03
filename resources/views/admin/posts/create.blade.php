@@ -5,8 +5,8 @@
 ?>
 @extends('layouts.admin')
 
-
 @section('content')
+
 <h1>Add new Post</h1>
 <div class="row">
    <div class="col-md-8">

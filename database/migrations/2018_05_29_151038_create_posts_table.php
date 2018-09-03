@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Post;
 
 class CreatePostsTable extends Migration
 {
@@ -18,6 +19,8 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->text('featured_image')->nullable();
+            $table->enum('status', ['published', 'draft','private']);
+            $table->string('slug')->nullable();
             $table->integer('user_id')->unsigned();
             $table->integer('category_id')->unsigned();
             $table->integer('image_id')->unsigned()->nullable();

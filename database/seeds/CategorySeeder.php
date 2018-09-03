@@ -12,19 +12,22 @@ class CategorySeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'name' => 'kultura',
+            'name' => 'Uncategorized',
         ]);
         DB::table('categories')->insert([
-            'name' => 'zabava',
+            'name' => 'Zabava',
         ]);
         DB::table('categories')->insert([
-            'name' => 'muzika',
+            'name' => 'Kultura',
         ]);
         DB::table('categories')->insert([
-            'name' => 'sport',
+            'name' => 'Muzika',
         ]);
         DB::table('categories')->insert([
-            'name' => 'novosti',
+            'name' => 'Sport',
+        ]);
+        DB::table('categories')->insert([
+            'name' => 'Novosti  ',
         ]);
     }
 }

@@ -2,10 +2,17 @@
   /*
      AdminUserController  -  show all Posts
   */
+
+  use App\User;
 ?>
 @extends('layouts.admin')
 
 @section('content')
+
+<?php   $users =  User::find(1);
+    print_r($users->name);
+
+?>
 <h1>Posts  <a href="/admin/posts/create"><button class="btn btn-basic btn-sm">Add New</button></a></h1>
 <div class="row">
     <div class="col-lg-12">
@@ -28,6 +35,7 @@
                                 <th>Author</th>
                                 <th>Categories</th>
                                 <th>Tags</th>
+                                <th>Status</th>
                                 <th>Created at</th>
                                
              
@@ -42,6 +50,7 @@
                                 <td>{{$post->user->name}}</td>
                                 <td>{{$post->category->name}}</td>
                                 <td>{{$post->category->name}}</td>
+                                <td>{{$post->status}}</td>
                                 <td>{{$post->created_at}}</td>
                           
 
