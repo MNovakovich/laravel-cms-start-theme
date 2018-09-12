@@ -6,7 +6,7 @@
    3) uraditi migraciju:
        <h5> php artisan migrate</h5>
    4) u fajlu database/seeds/AdminsSeeder, uneti podatke kako bismo registrovali admina:
-      ( ako preskocite ovu stavku, automatski se mozete registrovati pomocu username: admin@gmail.com, password: 111111 )
+      ( ako preskocite ovu stavku, automatski se mozete registrovati pomocu username: admin@gmail.com, password: 123admin )
    5) uraditi database seed
       <h5> php artisan db:seed <h5>
    
