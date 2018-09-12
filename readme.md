@@ -1,7 +1,7 @@
 <h4>Laravel CMS</h4>
 
 ## pokretanje aplikacije:
-   1) kreiranje baze
+   1) kreirajte bazu
    2) konfiguristati .env fajl
    3) uraditi migraciju:
        <h5> php artisan migrate</h5>
