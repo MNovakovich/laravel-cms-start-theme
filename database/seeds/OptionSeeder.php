@@ -13,14 +13,14 @@ class OptionSeeder extends Seeder
     {
         DB::table('options')->insert([
             'option_name'  => 'blogname',
-            'option_value' => 'Novosti',
+            'option_value' => 'Moj Sajt',
             'autoload'     => 'yes'
 
         ]);
 
            DB::table('options')->insert([
             'option_name'  => 'blogdescription',
-            'option_value' => 'Prva kopija wordpressa u laravelu',
+            'option_value' => 'Prva verzija mog cms-a',
             'autoload'     => 'yes'
 
         ]);
