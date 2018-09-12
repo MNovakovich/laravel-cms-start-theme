@@ -16,7 +16,6 @@ class AdminPostsController extends Controller {
 	   $tekst  =  'ovo je Neki Moj tekSt';
 		$posts =  Post::orderBy('created_at','desc')->get();
 
-		
 		return view('admin.posts.index')->with('posts',$posts);
 	}
 

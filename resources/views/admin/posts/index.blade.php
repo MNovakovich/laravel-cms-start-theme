@@ -10,7 +10,7 @@
 @section('content')
 
 <?php   $users =  User::find(1);
-    print_r($users->name);
+   
 
 ?>
 <h1>Posts  <a href="/admin/posts/create"><button class="btn btn-basic btn-sm">Add New</button></a></h1>
