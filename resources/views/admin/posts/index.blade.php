@@ -13,6 +13,7 @@
    
 
 ?>
+
 <h1>Posts  <a href="/admin/posts/create"><button class="btn btn-basic btn-sm">Add New</button></a></h1>
 <div class="row">
     <div class="col-lg-12">

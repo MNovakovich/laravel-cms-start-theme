@@ -1,8 +1,7 @@
-
 @extends('layouts.admin')
 
 @section('content')
-<h2>Admin panel </h2>
+<h2>Themes </h2>
 
 
 

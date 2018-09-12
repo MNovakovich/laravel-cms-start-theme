@@ -10,7 +10,10 @@ class Option extends Model
     
     public $timestamps = false;
     
-    protected $fillable = [];
+    protected $fillable = ['option_name', 'option_value','autoload'];
+
+    
+
 
 
 

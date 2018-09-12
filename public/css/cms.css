@@ -1,0 +1,24 @@
+.input-options{
+    padding: 20px;
+}
+
+.input-options.option-title{
+
+}
+.input-options.option-input{
+    width: 300px;
+    padding-left:100px;
+}
+
+.input-options.option-input input[type="text"] {
+    width:350px;
+}
+
+
+.description {
+     margin-top: 4px;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #667;
+}
+

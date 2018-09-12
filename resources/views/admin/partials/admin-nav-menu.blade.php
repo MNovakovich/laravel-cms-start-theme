@@ -60,16 +60,23 @@
                         <a href="#"><i class="fa fa-paint-brush fa-fw"></i> Appearance<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="flot.html">Themes</a>
+                                <a href="{{ url('admin/themes') }}">Themes</a>
                             </li>
-                            <li>
-                                <a href="morris.html">Morris.js Charts</a>
-                            </li>
+                            
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
 
-
+                     <li>
+                        <a href="{{ url('admin/options-general') }}"><i class="fa fa-sliders fa-fw"></i> Settings <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{ url('admin/options-general') }}">General</a>
+                            </li>
+                           
+                        </ul>
+                        <!-- /.nav-second-level -->
+                    </li>
 
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -79,33 +86,6 @@
                             </li>
                             <li>
                                 <a href="morris.html">Morris.js Charts</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-
-                    
-    
-                    <li>
-                        <a href="#"><i class="fa fa-sliders fa-fw"></i> Settings <span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="icons.html"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

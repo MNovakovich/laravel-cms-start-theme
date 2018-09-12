@@ -23,6 +23,7 @@
         <link href="{{asset('assets/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
 
         <link href="{{asset('assets/css/app.css')}}" rel="stylesheet">
+        <link href="{{asset('css/cms.css')}}" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,7 +50,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Strt Theme') }}
+                        <!-- {{ config('app.name', 'Strt Theme') }} -->
+                        {{ bloginfo('blogname') }}
                     </a>
         </div>
         <!-- /.navbar-header -->
@@ -124,7 +126,7 @@
 
 
 <!-- Page Content -->
-<div id="page-wrapper">
+<div id="page-wrapper" style="background:#f1f1f1;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">

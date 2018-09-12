@@ -30,6 +30,11 @@ Route::group(['middleware' => ['web', 'administrator']], function () {
 	Route::resource('/admin/categories', 'Admin\AdminCategoriesController');
 	Route::resource('/admin/media', 'Admin\AdminMediasController');
 
+	Route::get('/admin/options-general', 'Admin\AdminOptionsController@index');
+	Route::post('/admin/options-general', 'Admin\AdminOptionsController@update');
+
+	Route::get('/admin/themes', 'Admin\AdminThemesController@index');
+
 //	Route::get('/admin/media/upload', ['as'=>'admin.media.upload','uses' =>'Admin\AdminMediasController@post_upload']);
     
 
@@ -40,8 +45,3 @@ Route::group(['middleware' => ['web', 'administrator']], function () {
 TESTIRANJE
 
  */
-Route::get('/testiranje', 'Testiranje@index');
-Route::get('/test/user/role', ['middleware' => 'role', function () {
-	return 'tralala';
-}]);
-

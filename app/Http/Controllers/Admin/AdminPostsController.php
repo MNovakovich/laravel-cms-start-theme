@@ -13,15 +13,13 @@ use App\Models\Media;
 class AdminPostsController extends Controller {
 
 	public function index() {
-	   $tekst  =  'ovo je Neki Moj tekSt';
+	
 		$posts =  Post::orderBy('created_at','desc')->get();
-
+		
 		return view('admin.posts.index')->with('posts',$posts);
 	}
 
 	public function create() {
-
-	 
 	
 		$categories = Category::orderBy('name','asc')->get();
 		$statuses = Post::show_status_column_values();

@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder {
 		factory(App\Post::class, 30)->create();
 		$this->call(SlugSeeder::class);
 		$this->call(RoleUserSeeder::class);
+		$this->call(OptionSeeder::class);
+		
 
 	}
 }
