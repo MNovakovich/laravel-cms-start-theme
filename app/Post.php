@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Comment;
 
 class Post extends Model
 {
@@ -20,6 +21,10 @@ class Post extends Model
     // }
     public function user(){
          return $this->belongsTo('App\User');
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
     }
 
     public function category(){
