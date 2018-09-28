@@ -11,7 +11,10 @@
 
     <title>Admin</title>
     <!-- Bootstrap Core CSS -->
+    
         <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
         <!-- MetisMenu CSS -->
         <link href="{{asset('assets/css/metisMenu.min.css')}}" rel="stylesheet">

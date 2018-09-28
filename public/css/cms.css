@@ -22,3 +22,17 @@
     color: #667;
 }
 
+
+.theme-id-container{
+    background:rgba(15, 15,15, 0.9);
+    padding: 10px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.theme-id-container h4{
+   color: #fff;
+}
+
+.theme-item img {
+    width: 100%;
+}

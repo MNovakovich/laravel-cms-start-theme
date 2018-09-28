@@ -14,3 +14,21 @@ function bloginfo($option_name){
 
 
 }
+
+/**
+ * function return activated theme
+ */
+function path_activated_theme(){
+      $activated_theme = Option::where('option_name','activated_theme')->get();
+
+       $path = resource_path().'/themes';
+       return $path.'/'.$activated_theme[0]->option_value;
+}
+/**
+ * return folder name of activated theme
+ */
+function activated_theme(){
+      $activated_theme = Option::where('option_name','activated_theme')->get();
+       
+       return $activated_theme[0]->option_value;
+}

@@ -24,5 +24,12 @@ class OptionSeeder extends Seeder
             'autoload'     => 'yes'
 
         ]);
+
+            DB::table('options')->insert([
+            'option_name'  => 'activated_theme',
+            'option_value' => 'start-theme',
+            'autoload'     => 'yes'
+
+        ]);
     }
 }

@@ -12,7 +12,7 @@
  */
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('themes.'.activated_theme().'.index');
 });
 
 Auth::routes();
